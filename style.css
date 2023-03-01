@@ -1,3 +1,67 @@
+/* modal start */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1280;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.65);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  width: 60%;
+  height: 200px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 3px;
+}
+
+#showtext {
+  text-align: justify;
+  height: 100%;
+  /* background-color: teal; */
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* modal end */
+
+
+
 .timeline {
   /* display: none !important; */
 }
@@ -12,6 +76,7 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
+  user-select: none;
 }
 
 body {
@@ -358,18 +423,23 @@ swiper-slide {
   justify-content: center;
   align-items: center;
 }
-swiper-slide div img{
+
+swiper-slide div img {
   max-width: 100%;
 }
-.abbu{
+
+.abbu {
   width: 200px;
 }
-.brother{
+
+.brother {
   width: 280px;
 }
-.sister{
+
+.sister {
   width: 400px;
 }
+
 /*================== family end ========================*/
 /*================== daily rutin start ========================*/
 
@@ -428,10 +498,12 @@ swiper-slide div img{
   align-items: center;
   flex-wrap: wrap;
 }
+
 .more swiper-slide h2 {
   color: #fff;
   font-size: 20px;
 }
+
 .more swiper-slide:nth-child(1n) {
   background-color: #e80444;
 }
@@ -473,16 +545,25 @@ swiper-slide div img{
 }
 
 /*================== more end ========================*/
-textarea{
+textarea {
   resize: vertical;
+  /* border: none; */
 }
+textarea:active,
+textarea:focus {
+  /* border: none; */
+  outline: none;
+  border-color: #00bf8f;
+}
+
 .timeline {
   width: 100%;
   display: inline-block;
   background-image: linear-gradient(to right, #1A2980 0%, #26D0CE 51%, #1A2980 100%);
 
 }
-.timelineh2{
+
+.timelineh2 {
   text-align: center;
   color: #ff0084;
 }
@@ -1010,7 +1091,8 @@ h3 {
 }
 
 .f_followx {}
-.f_followx a{
+
+.f_followx a {
   text-decoration: none;
   color: #000;
 }
