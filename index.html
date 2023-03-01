@@ -1,1442 +1,743 @@
-/* modal start */
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1280;
-  /* Sit on top */
-  padding-top: 100px;
-  /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.65);
-  /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  width: 60%;
-  height: 200px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  border-radius: 3px;
-}
-
-#showtext {
-  text-align: justify;
-  height: 100%;
-  /* background-color: teal; */
-  display: flex;
-  align-items: center;
-  padding: 10px;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  margin-left: 20px;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* modal end */
-
-
-
-.timeline {
-  /* display: none !important; */
-}
-
-.resume {
-  display: none !important;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  scroll-behavior: smooth;
-  user-select: none;
-}
-
-body {
-  background-color: #f7f7f7;
-  /* background-color: #fbfcfd; */
-}
-
-.clear::after {
-  content: "";
-  clear: both;
-}
-
-/* ================================================ */
-.navbar {
-  background-color: #245271;
-  background-color: #001f67;
-  background: linear-gradient(to right, #011544, #02226d);
-  width: 100%;
-  position: relative;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 12px 15px;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
-
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.mainNav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* logo section */
-.logo {
-  /* align-self: baseline; */
-  align-self: center;
-}
-
-.logo img {
-  width: 100px;
-  margin-top: 8px;
-}
-
-
-/* menu section */
-.menu {
-  padding: 10px 0;
-}
-
-.menu li {
-  list-style: none;
-  display: inline-block;
-}
-
-.menu li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 22px;
-  padding: 5px 30px 5px 0;
-  display: inline-block;
-  padding: 5px 8px;
-  transition: 0.4s;
-  border-radius: 4px;
-  font-family: 'Katibeh', cursive;
-}
-
-.menu li a:hover {
-  color: #43d854;
-  transform: translatey(-3px);
-}
-
-/* toggle section */
-.toggle {
-  width: 40px;
-  height: 40px;
-  background-color: #f5f4f4;
-  border-radius: 6px;
-  position: absolute;
-  top: 3.5px;
-  right: 25px;
-  display: none;
-}
-
-.toggle span {
-  width: 30px;
-  height: 2px;
-  background-color: #000;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.toggle span:nth-child(1) {
-  margin-top: -8px;
-}
-
-.toggle span:nth-child(3) {
-  margin-top: 8px;
-}
-
-.toggle.open span:nth-child(1) {
-  transform: translate(-50%, -50%) rotate(45deg);
-  margin: 0;
-}
-
-.toggle.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.toggle.open span:nth-child(3) {
-  transform: translate(-50%, -50%) rotate(-45deg);
-  margin: 0;
-}
-
-/* ============ cover =========== */
-.bgcover {
-  width: 100%;
-  /* background: rgba(0,0,0,0.2) url(../../image/cover-011.jpg) no-repeat fixed;
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: soft-light; */
-  /* background-color: rgba(0,0,0,0.5); */
-}
-
-#Cover {
-  background: linear-gradient(to right, #011544, #02226d);
-  display: block;
-  width: 100%;
-}
-
-.cover {
-  width: 100%;
-  height: 80vh;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 55px;
-  overflow: hidden;
-}
-
-.cover .coverx {
-  width: 70%;
-  /* border: 2px solid #245271; */
-  align-self: center;
-  padding-left: 15px;
-
-}
-
-.cover .coverx h2 {
-  font-size: 2rem;
-  color: #19a068;
-  color: #1d547e;
-  color: #eb0d5b;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: 2px;
-}
-
-.cover .coverx h3 {
-  font-size: 2.4rem;
-  margin: 10px 0;
-  color: #10aff7;
-}
-
-.cover .coverx h3 span {
-  color: #84193e;
-  color: #0a8134;
-  color: #026594;
-  color: #eb0d5b;
-}
-
-.cover .coverx h4 {
-  color: #277430;
-  color: #8a226e;
-  color: #1d547e;
-  color: #19a068;
-
-  color: #e61f65;
-  color: #18b876;
-  font-family: 'Chicle', cursive;
-  word-wrap: 1px;
-  letter-spacing: 2px;
-}
-
-.cover .covery {
-  width: 50%;
-  display: flex;
-  align-items: center;
-}
-
-.cover .covery img {
-  width: 300px;
-  /* margin-top: 55px; */
-}
-
-.minabout {
-  /* background-image: linear-gradient(to right, #200122 0%, #6f0000  51%, #200122  100%);
-    background-image: linear-gradient(45deg, #1A2980 0%, #26D0CE  51%, #1A2980  100%); */
-  padding: 15px;
-}
-
-.minaboutitle {
-  text-align: justify !important;
-  margin: 7px 0;
-}
-
-.minabout h3 {
-  color: rgb(14, 13, 13);
-}
-
-.minabout h2 {
-  text-align: center;
-}
-
-.minabout h2 span {
-  color: #84193e;
-  color: #f93b71;
-}
-
-.minabout h3 {
-  font-size: 22px;
-  margin: 12px 0;
-  padding: 0px 10px;
-}
-
-.minaboutx {
-  display: flex;
-  justify-content: space-between;
-}
-
-.aboutx {
-  width: 50%;
-}
-
-.aboutx .abximg {
-  width: 50%;
-  margin: auto;
-  margin-top: 40px;
-  position: relative;
-}
-
-.aboutx .abximg img {
-  width: 100%;
-}
-
-.aboutx .abximg::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-image: linear-gradient(4deg, #1A2980 0%, #26D0CE 51%, #1A2980 100%);
-  border-radius: 5px;
-  transform: rotate(350deg);
-  z-index: -1;
-}
-
-.abouty {
-  width: 50%;
-}
-
-.abouty ul li {
-  padding: 10px 0;
-  font-size: 16px;
-  line-height: 18px;
-  color: #000;
-  font-family: "Montserrat";
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.abouty ul li b {
-  margin-right: 10px;
-  color: #17181c;
-  font-weight: 600;
-  position: absolute;
-  right: 0;
-}
-
-.abouty ul li .title {
-  min-width: 110px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  color: #17181c;
-  font-weight: 600;
-  position: relative;
-}
-
-.minabout h4 {
-  text-align: justify;
-}
-
-/*================== family start ========================*/
-
-#family {
-  background-color: white;
-  padding: 15px 10px;
-}
-
-#family .familyheading {
-  text-align: center;
-}
-
-#family .familyheading span {
-  color: #eb0d5b;
-}
-
-#family .aboutfamily p {
-  text-align: justify;
-  margin: 8px 0px;
-}
-
-swiper-container {
-  width: 300px;
-  height: 300px;
-}
-
-swiper-slide {
-  background-position: center;
-  background-size: cover;
-}
-
-.familyslider swiper-slide div {
-  width: 100%;
-  height: 300px;
-  background: linear-gradient(to right, #F00000 0%, #DC281E 51%, #F00000 100%);
-  background: -webkit-linear-gradient(to right, #A83279, #D38312);
-  background: linear-gradient(to right, #A83279, #D38312);
-  background: #fc4a1a;
-  background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
-  background: linear-gradient(to right, #f7b733, #fc4a1a);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-swiper-slide div img {
-  max-width: 100%;
-}
-
-.abbu {
-  width: 200px;
-}
-
-.brother {
-  width: 280px;
-}
-
-.sister {
-  width: 400px;
-}
-
-/*================== family end ========================*/
-/*================== daily rutin start ========================*/
-
-.dailyrtn {}
-
-.dailyrtn h2 {
-  text-align: center;
-  color: #ff0084;
-}
-
-.dailyrtn .dailyrtnimg {
-  width: 100%;
-}
-
-.dailyrtn .dailyrtnimg img {
-  width: 100%;
-}
-
-/*================== daily rutin end ========================*/
-
-
-/*================== more start ========================*/
-.moreh2 {
-  text-align: center;
-  margin: 10px 0px;
-  color: #00bf8f;
-}
-
-.more {
-  padding: 20px;
-  background: white;
-}
-
-.more swiper-container {
-  width: 240px;
-  height: 320px;
-}
-
-.more swiper-slide {
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  text-align: justify;
-  border-radius: 18px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  padding: 10px;
-}
-
-.more swiper-slide div {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.more swiper-slide h2 {
-  color: #fff;
-  font-size: 20px;
-}
-
-.more swiper-slide:nth-child(1n) {
-  background-color: #e80444;
-}
-
-.more swiper-slide:nth-child(2n) {
-  background-color: rgb(0, 140, 255);
-}
-
-.more swiper-slide:nth-child(3n) {
-  background-color: rgb(10, 184, 111);
-}
-
-.more swiper-slide:nth-child(4n) {
-  background-color: rgb(211, 122, 7);
-}
-
-.more swiper-slide:nth-child(5n) {
-  background-color: rgb(118, 163, 12);
-}
-
-.more swiper-slide:nth-child(6n) {
-  background-color: rgb(180, 10, 47);
-}
-
-.more swiper-slide:nth-child(7n) {
-  background-color: rgb(35, 99, 19);
-}
-
-.more swiper-slide:nth-child(8n) {
-  background-color: rgb(0, 68, 255);
-}
-
-.more swiper-slide:nth-child(9n) {
-  background-color: rgb(218, 12, 218);
-}
-
-.more swiper-slide:nth-child(10n) {
-  background-color: rgb(54, 94, 77);
-}
-
-/*================== more end ========================*/
-textarea {
-  resize: vertical;
-  /* border: none; */
-}
-textarea:active,
-textarea:focus {
-  /* border: none; */
-  outline: none;
-  border-color: #00bf8f;
-}
-
-.timeline {
-  width: 100%;
-  display: inline-block;
-  background-image: linear-gradient(to right, #1A2980 0%, #26D0CE 51%, #1A2980 100%);
-
-}
-
-.timelineh2 {
-  text-align: center;
-  color: #ff0084;
-}
-
-p {
-  text-align: justify;
-}
-
-/* <button class="btn-grad">Hover</button> */
-.btn-gradd {
-  background-image: linear-gradient(to right, #1A2980 0%, #26D0CE 51%, #1A2980 100%);
-  padding: 7px 15px;
-  border-radius: 5px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  display: block;
-  border: none;
-  text-decoration: none;
-  font-family: 'Rowdies', cursive;
-}
-
-.btn-gradd:hover {
-  background-position: right center;
-  /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-}
-
-.edubg {
-  background-color: white;
-  background: linear-gradient(90deg, #00bf8f, #03372a);
-  padding: 30px 0;
-  margin-top: 10px;
-}
-
-#Fuck-skill {
-  text-align: center;
-  margin-top: 20px;
-}
-
-#Fuck-skill span {
-  color: #f93b71;
-}
-
-.skill {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.skillx {
-  width: 48%;
-  padding: 10px;
-}
-
-.skillyy {
-  width: 48%;
-  padding: 10px;
-}
-
-.skillyy .cskill:nth-child(1) .skilly span {
-  width: 75%;
-}
-
-.skillyy .cskill:nth-child(2) .skilly span {
-  width: 65%;
-}
-
-.skillyy .cskill:nth-child(3) .skilly span {
-  width: 85%;
-}
-
-.skillx .skill {}
-
-.cskill {
-  width: 100%;
-  margin-top: 10px;
-  display: inline-block;
-}
-
-.skillf {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
-}
-
-.skilly {
-  box-shadow: .4rem .4rem 1rem #ccc,
-    -.4rem -.4rem 1rem #ccc;
-  border-radius: 100vh;
-  padding: 4px 6px;
-  width: 100%;
-  height: 20px;
-  margin-top: 5px;
-}
-
-.skilly span {
-  /* background-color: #12f370; */
-  background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC 51%, #02AAB0 100%);
-
-  border-radius: 100vh;
-  height: 100%;
-  display: block;
-}
-
-.cskill:nth-child(1) .skilly span {
-  width: 70%;
-}
-
-.cskill:nth-child(2) .skilly span {
-  width: 90%;
-}
-
-.cskill:nth-child(3) .skilly span {
-  width: 80%;
-}
-
-#services {}
-
-#services .container {
-  padding: 25px 0;
-}
-
-#services .container h2 {
-  text-align: center;
-  margin: 15px;
-}
-
-#services .container h2 span {
-  color: #19a068;
-}
-
-#services .container .minserv {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-#services .container .minserv .servcild {
-  width: 33%;
-  border-radius: 7px;
-  padding: 15px;
-  box-shadow: .4rem .4rem 1rem #ccc,
-    -.4rem -.4rem 1rem #ccc;
-  margin-bottom: 15px;
-  position: relative;
-  margin: auto;
-}
-
-#services .container .minserv .servcild i {}
-
-#services .container .minserv .servcild h3 {
-  margin: 10px 0;
-}
-
-#services .container .minserv .servcild p {}
-
-#services .container .minserv .servcild::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(to right, #093028 0%, #237A57 51%, #093028 100%);
-  background-image: linear-gradient(to right, #007991 0%, #78ffd6 51%, #007991 100%);
-  background-image: linear-gradient(to right, #F00000 0%, #DC281E 51%, #F00000 100%);
-  background-image: linear-gradient(to right, #00bf8f 0%, #001510 51%, #00bf8f 100%);
-  background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC 51%, #02AAB0 100%);
-  background-image: linear-gradient(to right, #ff0084 0%, #33001b 51%, #ff0084 100%);
-
-  background-image: linear-gradient(to right, #76b852 0%, #8DC26F 51%, #76b852 100%);
-  z-index: -1;
-  clip-path: circle(5rem at 5% 0%);
-  transition: .3s linear;
-  border-radius: 10px;
-}
-
-#services .container .minserv .servcild:hover:before {
-  clip-path: circle(100%);
-}
-
-/* last 3 services by right side */
-/* #services .container .minserv .servcild:nth-child(4){
-    text-align: right;
-  }
-  #services .container .minserv .servcild:nth-child(5){
-    text-align: right;
-  }
-  #services .container .minserv .servcild:nth-child(6){
-    text-align: right;
-  }
-  #services .container .minserv .servcild:nth-child(4)::before{
-    clip-path: circle(5rem at 100% 0%);
-  }
-  #services .container .minserv .servcild:nth-child(5)::before{
-    clip-path: circle(5rem at 100% 0%);
-  }
-  #services .container .minserv .servcild:nth-child(6)::before{
-    clip-path: circle(5rem at 100% 0%);
-  }*/
-
-
-.wr-pro {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.wr-pro .wrprox {
-  width: 33.33%;
-  padding: 10px;
-  height: auto;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.wr-pro .wrprox p {
-  align-self: center;
-}
-
-.wr-pro .wrprox:nth-child(1) {
-  border-top: 2px solid #eb0d5b;
-  border-right: 2px solid #eb0d5b;
-}
-
-.wr-pro .wrprox:nth-child(2) {
-  border-bottom: 2px solid #eb0d5b;
-  border-right: 2px solid #eb0d5b;
-}
-
-.wr-pro .wrprox:nth-child(3) {
-  border-top: 2px solid #eb0d5b;
-  /* border-right: 2px solid #eb0d5b; */
-}
-
-.wr-pro .wrprox h3 {
-  margin: 8px 0;
-}
-
-.wr-pro .wrprox p {
-  text-align: justify;
-  color: white;
-}
-
-.wr-pro .wrprox .bbutton1,
-.bbutton3 {
-  position: absolute;
-  top: -5%;
-  left: 40%;
-  margin: auto;
-  border: none;
-  padding: 2px 7px;
-  border-radius: 100vh;
-  color: white;
-  background: #33001b;
-}
-
-.bbutton2 {
-  position: absolute;
-  bottom: -5%;
-  left: 40%;
-  margin: auto;
-  border: none;
-  padding: 2px 7px;
-  border-radius: 100vh;
-  color: white;
-  background: #33001b;
-}
-
-.resume {}
-
-.resume h2 {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.resume h2 span {
-  color: #00bf8f;
-}
-
-.resume .mywrk {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
-.resume .mywrk .mywn {
-  width: 30%;
-  margin-bottom: 15px;
-}
-
-.mywrk .mywn .mywn-img {
-  position: relative;
-}
-
-.mywrk .mywn .mywn-img img {
-  width: 100%;
-}
-
-.mywrk .mywn .mywn-img::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  background-color: rgb(0, 0, 0, .5);
-  transition: 0.3s;
-}
-
-.mywrk .mywn .mywn-img:hover::before {
-  height: 100%;
-}
-
-.Button4 {
-  width: 100px;
-  height: 35px;
-  color: #fff;
-  padding: 5px 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  overflow: hidden;
-  border-radius: 5px;
-  border: none;
-  background-image: linear-gradient(to right, #F00000 0%, #DC281E 51%, #F00000 100%);
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.Button4:hover {
-  border-radius: 5px;
-  padding-right: 24px;
-  padding-left: 8px;
-}
-
-.Button4:hover:after {
-  opacity: 1;
-  right: 10px;
-}
-
-.Button4:after {
-  content: "\00BB";
-  position: absolute;
-  opacity: 0;
-  font-size: 22px;
-  line-height: 37px;
-  top: 0;
-  right: -20px;
-  transition: 0.4s;
-}
-
-.abs {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  visibility: hidden;
-  opacity: 0;
-  display: inline;
-}
-
-.mywn-img:hover .abs {
-  visibility: visible;
-  opacity: 1;
-}
-
-.temp {
-  margin-top: 10px;
-}
-
-/* --------- count -------------------- */
-.trst-p {
-  background-color: white;
-  padding: 10px;
-}
-
-.trst-p h2 {
-  text-align: center;
-  margin: 5px 0;
-}
-
-.trst-p h2 span {
-  color: #00bf8f;
-}
-
-.count {
-  box-shadow: .4rem .4rem 1rem #ccc,
-    -.4rem -.4rem 1rem #ccc;
-  background: url(./x.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.count-x {
-  width: 100%;
-  background: rgb(0, 0, 0, .5);
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  /* background-blend-mode: multiply; */
-}
-
-.count .countx {
-  width: 30%;
-  border-radius: 5px;
-  padding: 10px;
-  border: 3px solid white;
-  padding-top: 15px;
-}
-
-.trst-p .count .countx h1,
-h3 {
-  /* color: white; */
-}
-
-.trst-p .count .countx h1 {
-  text-align: center;
-  margin-bottom: 7px;
-  color: #00bf8f;
-  margin-top: 5px;
-}
-
-.trst-p .count .countx h3 {
-  text-align: center;
-  color: white;
-}
-
-
-.foter {}
-
-.fh2 {
-  color: white;
-  text-align: center;
-  background-color: #000;
-  margin: 15px 0;
-  padding: 10px;
-}
-
-.foter .xfoter {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-.foter .xfoter .f_follow {
-  width: 50%;
-  align-self: center;
-}
-
-.foter .xfoter .f_follow h2 {
-  text-align: center;
-  margin: 10px 0;
-}
-
-.foter .xfoter .f_follow .link {
-  text-align: center;
-}
-
-.foter .xfoter .f_follow .link a {
-  margin-top: 20px;
-  padding: 5px 10px;
-  font-size: 40px;
-  display: inline-block;
-  box-shadow: .4rem .4rem 1rem #ccc,
-    -.4rem -.4rem 1rem #ccc;
-  color: black;
-  transition: 0.4s;
-}
-
-.foter .xfoter .f_follow .link a:hover {
-  transform: translateY(-5px);
-}
-
-.fb i {
-  color: #3b5998;
-}
-
-.wa i {
-  color: #43d854;
-}
-
-.tg i {
-  color: #00405d;
-}
-
-.tt i {
-  color: #55acee;
-}
-
-.foter .xfoter .f_contact {
-  width: 50%;
-  text-align: center;
-}
-
-.foter .xfoter .f_contact input {
-  width: 90%;
-  padding: 10px;
-  /* text-align: center; */
-  border: 2px solid black;
-  margin-bottom: 10px;
-  border-radius: 100vh;
-}
-
-.foter .xfoter .f_contact textarea {
-  width: 88%;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.foter .xfoter .f_contact button {
-  border-radius: 100vh;
-  width: 120px;
-}
-
-.f_followx {}
-
-.f_followx a {
-  text-decoration: none;
-  color: #000;
-}
-
-.f_followx i {}
-
-.f_followx span {
-  padding: 0 7px;
-  font-size: 20px;
-}
-
-.f_followx h3 {
-  display: inline-block;
-}
-
-.FOTTER {
-  width: 100%;
-  background-color: #000;
-}
-
-.FOTTER .container p {
-  color: white;
-  padding: 10px 0;
-  text-align: center;
-}
-
-/*navbar responsive with media query */
-
-@media screen and (max-width: 800px) {
-  .navbar {
-    background-color: #245271;
-    box-shadow: 0 0 6px #000;
-    height: 56px;
-    position: relative;
-    z-index: 9;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .logo img {
-    width: 100px;
-    margin-top: 15px;
-  }
-
-  /* .menu{
-        width: 100%;
-        height: 300px;
-        position: absolute;
-        border-top: 1px solid white;
-        background-color: #245271;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        transform: translateX(-100%);
-        text-align: center;
-        transition: .4s;
-    } */
-  .menu {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    border-top: 1px solid white;
-    background-color: #245271;
-    top: 50px;
-    right: 0;
-    width: 200px;
-    transform: translateX(+100%);
-    text-align: center;
-    transition: .4s;
-    padding: 0px 20px;
-    background: rgb(0, 0, 0, .5);
-    background: linear-gradient(90deg, blue, green);
-    background: linear-gradient(to right, #011544, #02226d);
-  }
-
-  .menu li {
-    display: block;
-    text-align: left;
-    border-bottom: 2px solid white;
-    transition: 0.4s;
-  }
-
-  .menu li a {
-    padding: 10px 0;
-    font-size: 27px;
-    display: block;
-  }
-
-  .menu li:hover {
-    display: block;
-    text-align: left;
-    border-bottom: 2px solid #43d854;
-  }
-
-  .menu.open {
-    transform: translateX(0%);
-  }
-
-  .toggle {
-    display: block;
-    cursor: pointer;
-    top: 8px;
-  }
-
-  .cover {
-    flex-wrap: wrap;
-    /* flex-flow: column-reverse; */
-    box-sizing: border-box;
-    padding-bottom: 30px;
-    justify-content: space-evenly;
-    margin-top: 55px;
-  }
-
-  .cover .coverx {
-    width: 100%;
-  }
-
-  .cover .coverx h2 {
-    font-size: 1.3rem;
-  }
-
-  .cover .coverx h3 {
-    font-size: 1.7rem;
-  }
-
-  .cover .coverx h4 {
-    font-size: 1rem;
-  }
-
-  .cover .covery {
-    margin-top: -3opx;
-    width: 100%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .cover .covery img {
-    margin-top: 30px;
-    /* width: 85vw; */
-  }
-
-  .minaboutx {
-    display: inline-block;
-  }
-
-  .minabout h3 {
-    font-size: 15px;
-  }
-
-  .aboutx {
-    width: 100%;
-    display: inline-block;
-  }
-
-  .aboutx .abximg {}
-
-  .abouty {
-    width: 100%;
-    display: inline-block;
-    margin-top: 15px;
-  }
-
-  .abouty ul li {
-    font-size: 15px;
-  }
-
-  .btn-gradd {
-    padding: 5px 8px;
-    border-radius: 3px;
-    font-size: 12px;
-  }
-
-  .skill {
-    display: inline-block;
-  }
-
-  .skillx {
-    width: 90%;
-    margin: auto;
-  }
-
-  .skilly {
-    height: 14px;
-  }
-
-  .skilly span {
-    height: 7px;
-  }
-
-  .skillyy {
-    margin-top: -20px !important;
-    width: 90%;
-    margin: auto;
-  }
-
-  #services .container .minserv {
-    display: inline-block;
-  }
-
-  #services .container .minserv .servcild {
-    width: 90%;
-    /* display: inline-block; */
-    margin: auto;
-    margin-bottom: 20px;
-  }
-
-  .wr-pro {
-    width: 100%;
-    display: inline-block;
-  }
-
-  .wr-pro .wrprox {
-    width: 90%;
-    margin: auto;
-    padding: 10px;
-    /* height: 200px; */
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-
-  .wr-pro .wrprox p {
-    align-self: center;
-  }
-
-  .wr-pro .wrprox:nth-child(1) {
-    border-top: 2px solid #eb0d5b;
-    border-right: 2px solid #eb0d5b;
-  }
-
-  .wr-pro .wrprox:nth-child(2) {
-    border-top: 2px solid #eb0d5b;
-    border-left: 2px solid #eb0d5b;
-    border-bottom: 2px solid #eb0d5b;
-    border-right: none;
-  }
-
-  .wr-pro .wrprox:nth-child(3) {
-    border-bottom: 2px solid #eb0d5b;
-    border-right: 2px solid #eb0d5b;
-    border-top: none;
-  }
-
-  .wr-pro .wrprox .bbutton1,
-  .bbutton3 {
-    position: absolute;
-    top: -8%;
-    left: 40%;
-    margin: auto;
-    border: none;
-    padding: 2px 7px;
-    border-radius: 100vh;
-    color: white;
-    background: #33001b;
-  }
-
-  .bbutton2 {
-    position: absolute;
-    top: -7%;
-    left: 40%;
-    bottom: 95%;
-    margin: auto;
-    border: none;
-    padding: 3px 7px;
-    border-radius: 100vh;
-    color: white;
-    background: #33001b;
-  }
-
-  .resume .mywrk {
-    display: inline-block;
-  }
-
-  .resume .mywrk .mywn {
-    width: 80%;
-    margin: auto;
-    margin-bottom: 15px;
-  }
-
-  .foter .xfoter {
-    display: inline-block;
-  }
-
-  .foter .xfoter .f_follow {
-    width: 90%;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-
-  .foter .xfoter .f_contact {
-    width: 90%;
-    margin: auto;
-  }
-
-  .trst-p .count .countx h1 {
-    font-size: 15px;
-  }
-
-  .trst-p .count .countx h3 {
-    font-size: 15px;
-  }
-
-  .foter .xfoter .f_follow h2 {
-    margin-top: 30px;
-  }
-
-  .foter .xfoter .f_follow .link {
-    margin-bottom: 20px;
-  }
-}
-
-
-
-.fun {
-  /* background-color: #fff; */
-  width: 90%;
-  margin: auto;
-  padding: 15px;
-  border-radius: 7px;
-  margin-bottom: 30px;
-}
-
-.fun p {
-  text-align: center;
-  color: #ffffff;
-  font-size: 24px;
-  font-family: 'Rowdies', cursive;
-  font-weight: bold;
-  text-align: justify;
-}
-
-.fun p span {
-  color: #00bf8f;
-  color: #37f041;
-  color: #ec1552;
-  font-family: 'Rowdies', cursive;
-}
-
-.fun h4 {
-  text-align: center;
-  color: #00BCD4;
-  margin-top: 7px;
-  font-size: 20px;
-}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Arbutus&family=Bayon&family=Chicle&family=Germania+One&family=Karantina:wght@300&family=Katibeh&family=Kavoon&family=Kumar+One&family=Metal+Mania&family=Mogra&family=Orelega+One&family=Roboto+Condensed:ital,wght@0,300;0,700;1,300;1,400&family=Roboto+Serif:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,800&family=Roboto+Slab:wght@400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&family=Rowdies:wght@300&family=Stylish&family=Yuji+Mai&display=swap"
+        rel="stylesheet">
+    <!-- font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- timeline css -->
+    <link rel="stylesheet" href="./timeline.css">
+    <title>My Personal Website</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="showtext"></p>
+        </div>
+
+    </div>
+    <!-- navbar start -->
+    <div class="navbar">
+        <div class="container">
+            <div class="mainNav">
+
+                <!-- logo -->
+                <div class="logo">
+                    <!-- <a href="#">fort<span>folio</span></a> -->
+                    <img src="./mylogo002e0.png" alt="" srcset="">
+                </div>
+
+                <!-- menu section -->
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Edducation">Education</a></li>
+                    <li><a href="#family">Family</a></li>
+                    <li><a href="#memory">Memory</a></li>
+                    <li><a href="#services">Status</a></li>
+                    <li><a href="#abutmore">More</a></li>
+                    <li><a href="#Contactt">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- toggle section -->
+            <div class="toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+    </div>
+
+
+    <section id="Cover">
+        <div class="container">
+            <div class="cover">
+                <div class="coverx">
+                    <h2>আসসালামু আলাইকুম</h2>
+                    <h3>আমি <span> মোহাম্মদ সাহিদ</span></h3>
+                    <h4>আমার ওয়েবসাইটে আপনাকে স্বাগতম</h4>
+                </div>
+                <div class="covery">
+                    <img src="./coverbannerpic.png" alt="">
+                </div>
+            </div>
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160">
+                <path fill="#f7f7f7" fill-opacity="1" d="M0,32L720,160L1440,32L1440,320L720,320L0,320Z"></path>
+              </svg> -->
+        </div>
+    </section>
+
+    <section>
+        <div id="About">
+            <div class="minabout container">
+                <h2>About <span>Me</span></h2>
+                <h2 class="minaboutitle">পৃথিবীর বাকি সব মানুষের মতই আমিও একজন সাধারণ মানুষ তবে অন্যদের সাথে আমার কিছু
+                    পার্থক্য রয়েছে যা নিচে দেওয়া রয়েছে।</h2>
+                <div class="minaboutx">
+                    <div class="aboutx">
+                        <div class="abximg"><img src="./temp-003.png" alt=""></div>
+                    </div>
+                    <div class="abouty">
+                        <ul>
+                            <li><span class="title">পূর্ণ নাম <b>:</b></span>মোহাম্মদ সাহিদ</li>
+                            <li><span class="title">বয়স <b>:</b></span><span class="myage"></span></li>
+                            <li><span class="title">ভাষা<b>:</b></span>বাংলা, ইংরেজী, হিন্দি</li>
+                            <li><span class="title">নাম্বার<b>:</b></span>০১৭৭৯-৪৮১৭৫৯</li>
+                            <li><span class="title">ইমেইল <b>:</b></span>mdshahid7384@gmail.com</li>
+                            <li><span class="title">ঠীকানা<b>:</b></span><span>রোড নং-১,জে-ব্লক,হালিশহর</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------- Education satrt ------------------------>
+    <section>
+        <div id="Edducation" class="container edubg">
+            <h2 style="text-align: center;margin: 10px 0 25px 0;color: #fff;">My <span
+                    style="color: #f93b71;">Education</span></h2>
+            <div class="wr-pro">
+                <div class="wrprox">
+                    <p>প্রাতিষ্ঠানিকভাবে আমার শিক্ষাজীবন শুরু হয় ২০০৬ সালে। আমার জীবনের প্রথম স্কুল হলো দক্ষিণ পূর্ব
+                        মাইটভাঙ্গা সরকারি প্রাথমিক বিদ্যালয়। ২০১১ সালে সমাপনী পরিক্ষায় উত্তীর্ণ হওয়ার পর উক্ত বিদ্যালয়
+                        থেকে আমি প্রাথমিক পরাশুনা শেষ করি।</p>
+                    <button class="bbutton1">প্রাথমিক</button>
+                </div>
+                <div class="wrprox">
+                    <p>PSC পরীক্ষার শেষে আমি ৬ষ্ঠ শ্রেনীতে ভর্তি হই। আর স্কুল হিসাবে বেছে নিই সাউথ সন্দ্বীপ বহুমুখী উচ্চ
+                        বিদ্যালয়। ২০১৫ সালে JSC পরীক্ষার মাধ্যমে ৮ম শ্রেনীর পরাশুনা শেষ করে একই বিদ্যালয়ে ৯ম শ্রেনীতে
+                        ভর্তি হই। অবশেষে ২০১৮ সালে SSC পরীক্ষা দেওয়ার মাধ্যমে আমার নিম্নমাধ্যমিক জীবন সমাপ্ত হয়। ২০১৮
+                        সালে আমি সাউথ সন্দ্বীপ ডিগ্রি কলেজে একাদ্বশ শ্রণীতে ভর্তী হই। ২০২১ সালে আমার মাধ্যমিক জীবন শেষ
+                        হয়।</p>
+                    <button class="bbutton2">মাধ্যমিক</button>
+                </div>
+                <div class="wrprox">
+                    <P>২০২২ সালে শুরু হয় আমার জীবনের অত্যন্ত গুরুত্বপূর্ণ অংশ। কারন ঐ বছর আমি উচ্চমাধ্যমীকে উত্তীর্ণ হই।
+                        এখন আমি ৩য় সেমিস্টারে অধ্যয়নরত। সবকিছু ঠীক ভাবে চললে আশাকরি ২০২৫ সালে আমার উচ্চমাধ্যমিক জীবন শেষ
+                        হবে। কিন্তু এখনো স্কুল জীবনের মুহুর্ত্ব গুলো মনে পরে তাইতো আমার মন স্কুল জীবন ফীরে পেতে আবিরাম
+                        বিচলিত হচ্ছে।</P>
+                    <button class="bbutton3">উচ্চমাধ্যমিক</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------- Education end ------------------------>
+
+    <!---------------- family start ------------------------->
+    <section>
+        <div id="family" class="container">
+            <h2 class="familyheading">My <span>Family</span></h2>
+            <div class="aboutfamily">
+                <p>আমার পরিবারের মোট সদস্য সংখ্যা ৫ জন। যার মধ্যে আমার বাবা-মা আমি এবং আমার ছোট ভাই ও বোন।</p>
+            </div>
+            <div class="familyslider">
+                <swiper-container class="mySwiper" pagination="true" effect="cube" grab-cursor="true"
+                    cube-effect-shadow="true" cube-effect-slide-shadows="true" cube-effect-shadow-offset="20"
+                    cube-effect-shadow-scale="0.94">
+                    <swiper-slide title="আমি">
+                        <div>
+                            <img src="./ami.png" />
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide title="বাবা">
+                        <div>
+                            <img class="abbu" src="./abbu.png" />
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide title="ছোট ভাই">
+                        <div>
+                            <img class="brother" src="./brother.png" />
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide title="ছোট বোন।">
+                        <div>
+                            <img class="sister" src="./sister.png" />
+                        </div>
+                        <!-- <img src="https://swiperjs.com/demos/images/nature-2.jpg" /> -->
+                    </swiper-slide>
+                </swiper-container>
+            </div>
+        </div>
+    </section>
+    <!---------------- family end ------------------------->
+
+    <section>
+        <div id="memory" class="container">
+            <div class="timeline">
+                <svg preserveAspectRatio="none" viewBox="0 0 100 200" height="50" width="100%" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" style="fill:white;">
+                    <path d="M0 0 L50 100 L100 0 Z"></path>
+                </svg>
+                <h2 class="timelineh2">Memories</h2>
+                <div class="wrapper">
+                    <div class="center-line">
+                        <!-- <a href="#" class="scroll-icon"><i class="fas fa-caret-up"></i></a> -->
+                    </div>
+                    <div class="row row-1">
+                        <section>
+                            <i class="icon fas fa-home"></i>
+                            <div class="details">
+                                <span class="title">Childhood</span>
+                                <span>1st Jan 2003</span>
+                            </div>
+                            <p>আমার বাল্যকাল অনেক আনন্দের ছিলো।
+                                যার অন্যতম কারন হলো আমি আমার পরিবারের বড় ছেলে।
+                                তাই আমার অধিকাংশ আত্মীয় স্বজনের স্নেহ পেয়েছি।
+                                তবে বাল্যকালে আমার সাথে বড় দুটি দুর্ঘটনা ঘটে যায়।
+                                যার ফল আমি আজও বয়ে বেড়াচ্ছি।</p>
+                            <div class="bottom">
+                                <a href="#abutmore" class="btn-gradd">Read more</a>
+                                <i>- Mohammad Shahid</i>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="row row-2">
+                        <section>
+                            <i class="icon fas fa-map-marker-alt"></i>
+                            <div class="details">
+                                <span class="title">Education</span>
+                                <span>16th Dec 2011</span>
+                            </div>
+                            <p>যদিও আমার পড়াশুনার বিষদ বিবরণ ইতিমধ্যেই দিয়েছি তবে আমি পরাশুনার ক্ষেত্রে নিজের প্রতি সঠীক
+                                বিচার করতে পারিনি।</p>
+                            <div class="bottom">
+                                <a href="#abutmore" class="btn-gradd">Read more</a>
+                                <i>- Mohammad Shahid</i>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="row row-1">
+                        <section>
+                            <i class="icon fas fa-rocket"></i>
+                            <div class="details">
+                                <span class="title">Profession</span>
+                                <span>2rd Aug 2022</span>
+                            </div>
+                            <p>আমার তেমন কোন পেশা নেই।
+                                টিউশান করাচ্ছি আর একটা কোচিং এর সাথে জড়িত।</p>
+                            <div class="bottom">
+                                <a href="#abutmore" class="btn-gradd">Read more</a>
+                                <i>- Mohammad Shahid</i>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="row row-2">
+                        <section>
+                            <i class="icon fas fa-globe"></i>
+                            <div class="details">
+                                <span class="title">Experience</span>
+                                <span>28th Nov 2022</span>
+                            </div>
+                            <p>আমি যেহেতু বিশেষ কিছু করছি না। সেহেতু তেমন অভিঙ্গতাও নেই তবে চেষ্টা করছি কিছু করার।</p>
+                            <div class="bottom">
+                                <a href="#abutmore" class="btn-gradd">Read more</a>
+                                <i>- Mohammad Shahid</i>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="row row-1">
+                        <section>
+                            <i class="icon fas fa-paper-plane"></i>
+                            <div class="details">
+                                <span class="title">Ambition</span>
+                                <span>18th Jun 2020</span>
+                            </div>
+                            <p>আমার জীবনে অনেক লক্ষ্য রয়েছে তার মধ্যে অন্যতম একটি হলো মা এবং বাবাকে একসাথে হাসতে দেখা।
+                            </p>
+                            <div class="bottom">
+                                <a href="#abutmore" class="btn-gradd">Read more</a>
+                                <i>- Mohammad Shahid</i>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="row row-2">
+                        <section>
+                            <i class="icon fas fa-star"></i>
+                            <div class="details">
+                                <span class="title">Achievements</span>
+                                <span>6th Feb 2023</span>
+                            </div>
+                            <p>এ ক্ষেত্রে আমি একজন হতভাগা <span>&#128578;</span></p>
+                            <div class="bottom">
+                                <a href="#abutmore" class="btn-gradd">Read more</a>
+                                <i>- Mohammad Shahid</i>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- <div class="fun">
+                    <p>
+                        এই মুহুর্তে আমার বয়স :-
+                        <span class="year"></span> বছর
+                        <span class="month"></span> মাস
+                        <span class="day"></span> দিন
+                        <span class="hour"></span> ঘন্টা
+                        <span class="min"></span> মিনিট
+                        <span class="sec"></span> সেকেন্ড
+                    </p>
+                    <h4>still i am single!</h4>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container bgw">
+            <h2 id="Fuck-skill">My <span>Characteristic</span></h2>
+            <div class="skill">
+
+                <div class="skillx">
+                    <div class="cskill">
+                        <div class="skillf">
+                            <p>পরিশ্রমী</p>
+                            <p>৭০%</p>
+                        </div>
+                        <div class="skilly">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="cskill">
+                        <div class="skillf">
+                            <p>সৎ</p>
+                            <p>৯০%</p>
+                        </div>
+                        <div class="skilly">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="cskill">
+                        <div class="skillf">
+                            <p>অলস</p>
+                            <p>৮০%</p>
+                        </div>
+                        <div class="skilly">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skillyy">
+                    <div class="cskill">
+                        <div class="skillf">
+                            <p>অনুগত</p>
+                            <p>৭৫%</p>
+                        </div>
+                        <div class="skilly">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="cskill">
+                        <div class="skillf">
+                            <p>ভাগ্যবান</p>
+                            <p>৬৫%</p>
+                        </div>
+                        <div class="skilly">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="cskill">
+                        <div class="skillf">
+                            <p>শ্রদ্ধাশীল</p>
+                            <p>৮৫%</p>
+                        </div>
+                        <div class="skilly">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div id="services">
+            <div class="container">
+                <h2><span>Status</span></h2>
+                <div class="minserv">
+                    <div class="servcild">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns:svgjs="http://svgjs.com/svgjs" width="50" height="50" x="0" y="0"
+                            viewBox="0 0 424 424" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                            class="">
+                            <g>
+                                <path
+                                    d="m167.289062 272.132812c-1.601562 0-3.214843-.550781-4.53125-1.671874l-45.296874-38.570313c-1.5625-1.332031-2.460938-3.277344-2.460938-5.332031 0-2.050782.902344-3.996094 2.460938-5.328125l45.296874-38.570313c2.941407-2.507812 7.359376-2.152344 9.867188.789063 2.503906 2.945312 2.152344 7.363281-.792969 9.867187l-39.035156 33.242188 39.035156 33.242187c2.945313 2.507813 3.296875 6.925781.792969 9.867188-1.386719 1.628906-3.355469 2.464843-5.335938 2.464843zm0 0"
+                                    fill="#fff" data-original="#000000" class=""></path>
+                                <path
+                                    d="m256.710938 272.132812c-1.980469 0-3.949219-.835937-5.332032-2.464843-2.507812-2.941407-2.152344-7.359375.789063-9.867188l39.035156-33.242187-39.035156-33.242188c-2.941407-2.503906-3.296875-6.921875-.789063-9.867187 2.503906-2.941407 6.925782-3.296875 9.863282-.789063l45.296874 38.570313c1.5625 1.332031 2.460938 3.277343 2.460938 5.328125 0 2.054687-.898438 4-2.460938 5.332031l-45.296874 38.570313c-1.316407 1.121093-2.929688 1.671874-4.53125 1.671874zm0 0"
+                                    fill="#fff" data-original="#000000" class=""></path>
+                                <path
+                                    d="m195.964844 301.0625c-.480469 0-.964844-.050781-1.453125-.152344-3.78125-.796875-6.203125-4.511718-5.40625-8.292968l28.230469-134.035157c.796874-3.78125 4.507812-6.203125 8.292968-5.40625 3.78125.796875 6.203125 4.507813 5.40625 8.292969l-28.230468 134.035156c-.695313 3.296875-3.601563 5.558594-6.839844 5.558594zm0 0"
+                                    fill="#fff" data-original="#000000" class=""></path>
+                                <path
+                                    d="m377 374.085938h-330c-25.914062 0-47-21.082032-47-47v-280.085938c0-25.914062 21.085938-47 47-47h330c25.914062 0 47 21.085938 47 47v280.085938c0 25.917968-21.085938 47-47 47zm-330-360.085938c-18.195312 0-33 14.804688-33 33v280.085938c0 18.195312 14.804688 33 33 33h330c18.195312 0 33-14.804688 33-33v-280.085938c0-18.195312-14.804688-33-33-33zm0 0"
+                                    fill="#fff" data-original="#000000" class=""></path>
+                                <path
+                                    d="m417 112.089844h-410c-3.867188 0-7-3.132813-7-7 0-3.863282 3.132812-7 7-7h410c3.867188 0 7 3.136718 7 7 0 3.867187-3.132812 7-7 7zm0 0"
+                                    fill="#fff" data-original="#000000" class=""></path>
+                                <path
+                                    d="m119.601562 78.59375c-12.210937 0-22.152343-9.941406-22.152343-22.152344 0-12.214844 9.941406-22.152344 22.152343-22.152344 12.214844 0 22.152344 9.9375 22.152344 22.152344 0 12.210938-9.9375 22.152344-22.152344 22.152344zm0-30.304688c-4.492187 0-8.152343 3.65625-8.152343 8.152344s3.660156 8.152344 8.152343 8.152344c4.496094 0 8.152344-3.65625 8.152344-8.152344s-3.65625-8.152344-8.152344-8.152344zm0 0"
+                                    fill="#fff" data-original="#000000" class=""></path>
+                                <path
+                                    d="m51.539062 78.378906c-12.214843 0-22.152343-9.9375-22.152343-22.152344 0-12.214843 9.9375-22.152343 22.152343-22.152343 12.214844 0 22.152344 9.9375 22.152344 22.152343 0 12.214844-9.9375 22.152344-22.152344 22.152344zm0-30.304687c-4.492187 0-8.152343 3.660156-8.152343 8.152343 0 4.496094 3.660156 8.152344 8.152343 8.152344 4.496094 0 8.152344-3.65625 8.152344-8.152344 0-4.492187-3.65625-8.152343-8.152344-8.152343zm0 0"
+                                    fill="#fff" data-original="#000000" class=""></path>
+                                <path
+                                    d="m187.664062 78.804688c-12.210937 0-22.148437-9.9375-22.148437-22.152344 0-12.210938 9.9375-22.148438 22.148437-22.148438 12.214844 0 22.152344 9.9375 22.152344 22.148438 0 12.214844-9.9375 22.152344-22.152344 22.152344zm0-30.304688c-4.492187 0-8.148437 3.65625-8.148437 8.152344s3.65625 8.152344 8.148437 8.152344c4.496094 0 8.152344-3.65625 8.152344-8.152344s-3.65625-8.152344-8.152344-8.152344zm0 0"
+                                    fill="#fff" data-original="#000000" class=""></path>
+                            </g>
+                        </svg>
+                        <p>আমি আমার জীবনে যা কিছু পেয়েছি তার চেয়ে বেশী কিছু হারিয়েছি।তারপরেও নিজেকে অনেক বেশী ভালোবাসি
+                            যদিও নিজের উপর শতভাগ বিশ্বাস নেই।
+                            পরিশেষে "সবকিছুর জন্য আলহামদুলিল্লাহ"</p>
+                    </div>
+                </div>
+                <div class="container trst-p">
+                    <div class="count">
+                        <div class="count-x">
+                            <div class="countx">
+                                <h3>People I Met</h3>
+                                <h1>3000+</h1>
+                            </div>
+                            <div class="countx">
+                                <h3>People I Love</h3>
+                                <h1>2500+</h1>
+                            </div>
+                            <div class="countx">
+                                <h3>People Love Me</h3>
+                                <h1>03</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section id="Blogs">
+        <div class="container resume">
+            <h2>My <span>work</span></h2>
+            <div class="mywrk">
+                <div class="mywn">
+                    <div class="mywn-img">
+                        <img src="./webp-001.jpg" alt="">
+                        <button title="it,s not work because website link unknown" class="Button4 abs" href="#">See
+                            it</button>
+                    </div>
+                </div>
+                <div class="mywn">
+                    <div class="mywn-img">
+                        <img src="./webp-002.jpg" alt="">
+                        <button title="it,s not work because website link unknown" class="Button4 abs" href="#">See
+                            it</button>
+                    </div>
+                </div>
+                <div class="mywn">
+                    <div class="mywn-img">
+                        <img src="./webp-003.jpg" alt="">
+                        <button title="it,s not work because website link unknown" class="Button4 abs" href="#">See
+                            it</button>
+                    </div>
+                </div>
+                <div class="mywn">
+                    <div class="mywn-img">
+                        <img src="./webp-004.jpg" alt="">
+                        <button title="it,s not work because website link unknown" class="Button4 abs" href="#">See
+                            it</button>
+                    </div>
+                </div>
+                <div class="mywn">
+                    <div class="mywn-img">
+                        <img src="./webp-005.jpg" alt="">
+                        <button title="it,s not work because website link unknown" class="Button4 abs" href="#">See
+                            it</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <section>
+        <div class="container trst-p">
+            <h2><span>Status</span></h2>
+            <div class="count">
+                <div class="count-x">
+                    <div class="countx">
+                        <h3>People I Met</h3>
+                        <h1>3000+</h1>
+                    </div>
+                    <div class="countx">
+                        <h3>People I Love</h3>
+                        <h1>2500+</h1>
+                    </div>
+                    <div class="countx">
+                        <h3>People Love Me</h3>
+                        <h1>03</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>what you need just te me and projectr,happy client counting</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, laboriosam veniam eum voluptatibus quis animi?</p>
+        <a href="#">See it</a> 
+    </section> -->
+
+    <section>
+        <div class="container dailyrtn">
+            <h2>My Daily Rutin</h2>
+            <div class="dailyrtnimg">
+                <img src="./dailyrutin.png" alt="" srcset="">
+            </div>
+        </div>
+    </section>
+    <section id="abutmore">
+        <div class="container more">
+            <h2 class="moreh2">More</h2>
+            <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
+                <swiper-slide>
+                    <div>
+                        <img src="./doingsomthng.jpg" alt="">
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div class="fun">
+                        <p>
+                            এই মুহুর্তে আমার বয়স :-
+                            <span class="year"></span> বছর
+                            <span class="month"></span> মাস
+                            <span class="day"></span> দিন
+                            <span class="hour"></span> ঘন্টা
+                            <span class="min"></span> মিনিট
+                            <span class="sec"></span> সেকেন্ড
+                        </p>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div>
+                        <h2>আমার বন্ধুর সংখ্যা কম কিন্তু তারা যথেষ্ট</h2>
+                        <img src="./friends.jpeg" alt="">
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div>
+                        <h2>
+                            আমার বাবা হলো আমার দেখা পৃথিবীর শ্রেষ্ঠ ব্যাক্তি তাই আমার কাছে তিনি G.O.A.T.
+                        </h2>
+                    </div>
+
+                </swiper-slide>
+                <swiper-slide>
+                    <div>
+                        <h2>
+                            একদা আমার একটি স্বপ্ন ছিলো আমি নিজ চোখে সেটা ভেঙে যেতে দেখেছি আর এখন আমার একের অধিক স্বপ্ন
+                            রয়েছে।
+                        </h2>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div>
+                        <h1>married <span>&#128525</span></h1>
+                    </div>
+                </swiper-slide>
+                <!-- <swiper-slide>Slide 7</swiper-slide>
+                <swiper-slide>Slide 8</swiper-slide>
+                <swiper-slide>Slide 9</swiper-slide> -->
+            </swiper-container>
+        </div>
+    </section>
+    <section id="Contactt">
+        <div class="container foter">
+            <div class="xfoter">
+                <div class="f_follow">
+                    <div class="f_followx">
+                        <a href="tel:01779481759">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        <span>:</span>
+                        <h3>01779-481759</h3><br><br>
+                        <i class="fa-solid fa-message"></i><span>:</span>
+                        <h3>mdshahid7384@gmail.com</h3>
+                    </div>
+                    <h2>follow me on</h2>
+                    <div class="link">
+                        <a href="#!" onclick="show('Facebook')" class="fb"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://wa.me/8801779481759" class="wa"><i class="fab fa-whatsapp-square"></i></a>
+                        <!-- <a href="https://api.whatsapp.com/send?phone=01854681279" class="wa"><i class="fab fa-whatsapp-square"></i></a> -->
+                        <a href="https://t.me/mdshahid7384" class="tg"><i class="fab fa-telegram"></i></a>
+                        <a href="#!" onclick="show('Twitter')" title="I don't have any twitter account" class="tt"><i
+                                class="fab fa-twitter-square"></i></a>
+                    </div>
+                </div>
+                <div class="f_contact">
+                    <form action="">
+                        <input type="text" name="" id="entername" placeholder="Enter your name" required>
+                        <input type="email" name="" id="enteremail" placeholder="Enter your email" required>
+                        <textarea name="massage" placeholder="Enter your massage" id="entermassage" required rows="10"></textarea>
+                        <button  onclick="Alert('Name')" class="Button4" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="FOTTER">
+        <div class="container">
+            <p>Copyright @<span class="foterage">2023</span> all rights reserved Develop by</p>
+        </div>
+    </div>
+    <script>
+        // FOR NAVBAR
+        let toggle = document.querySelector(".toggle");
+        let menu = document.querySelector(".menu");
+
+        toggle.onclick = function () {
+            if (toggle.classList.contains("open")) {
+                toggle.classList.remove("open");
+                menu.classList.remove("open");
+            }
+            else {
+                toggle.classList.add("open");
+                menu.classList.add("open");
+            }
+        }
+
+
+        function realage() {
+            var finalEnlishToBanglaNumber = { '0': '০', '1': '১', '2': '২', '3': '৩', '4': '৪', '5': '৫', '6': '৬', '7': '৭', '8': '৮', '9': '৯' };
+            String.prototype.getDigitBanglaFromEnglish = function () {
+                var retStr = this;
+                for (var x in finalEnlishToBanglaNumber) {
+                    retStr = retStr.replace(new RegExp(x, 'g'), finalEnlishToBanglaNumber[x]);
+                }
+                return retStr;
+            };
+            let bd = new Date("2000-03-31");
+            let cd = new Date();
+            let year, month, day, hour, min, sec;
+            year = cd.getFullYear() - bd.getFullYear();
+            document.querySelector(".foterage").innerHTML = cd.getFullYear();
+            document.querySelector(".year").innerHTML = year.toString().getDigitBanglaFromEnglish();
+
+            let myage=year.toString().getDigitBanglaFromEnglish();
+                myage=myage+" "+"বছর";
+            document.querySelector(".myage").innerHTML = myage;
+            month = cd.getMonth() - bd.getMonth();
+            if (month < 0) {
+                month += 12;
+            }
+            document.querySelector(".month").innerHTML = month.toString().getDigitBanglaFromEnglish();
+            day = cd.getDate() - bd.getDate();
+            if (day < 0) {
+                day += bd.getDate();
+            }
+            document.querySelector(".day").innerHTML = day.toString().getDigitBanglaFromEnglish();
+            hour = cd.getHours() - bd.getHours();
+            if (hour < 0) {
+                hour += 24;
+            }
+            document.querySelector(".hour").innerHTML = hour.toString().getDigitBanglaFromEnglish();
+            min = cd.getMinutes() - bd.getMinutes();
+            document.querySelector(".min").innerHTML = min.toString().getDigitBanglaFromEnglish();
+            sec = cd.getSeconds() - bd.getSeconds();
+            document.querySelector(".sec").innerHTML = sec.toString().getDigitBanglaFromEnglish();
+        }
+
+
+        setInterval(realage, 1000);
+
+
+        function Alert() {
+            let entername=document.querySelector("#entername").value;
+            let enteremail=document.querySelector("#enteremail").value;
+            let entermassage=document.querySelector("#entermassage").value;
+            if(entername && enteremail && entermassage)
+                {
+                    alert(`your message "${entermassage}" submited \n\n for quick response please call 01779481759`);
+                }
+            // console.log(document.querySelector("#enteremail").value);
+            // console.log(document.querySelector("#entermassage").value);
+            
+            // alert("your message submited for quick response please call 01779481759");
+        }
+
+        // function show(params) {
+        //     alert(`Currently I don't have ${params} account\nIt will added soon`)
+        // }
+
+    </script>
+    <script src="./swiper.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script> -->
+
+
+
+    <!-- <script>
+        var finalEnlishToBanglaNumber = { '0': '০', '1': '১', '2': '২', '3': '৩', '4': '৪', '5': '৫', '6': '৬', '7': '৭', '8': '৮', '9': '৯' };
+        String.prototype.getDigitBanglaFromEnglish = function () {
+            var retStr = this;
+            for (var x in finalEnlishToBanglaNumber) {
+                retStr = retStr.replace(new RegExp(x, 'g'), finalEnlishToBanglaNumber[x]);
+            }
+            return retStr;
+        };
+
+        var english_number = "123456";
+
+        var bangla_converted_number = english_number.getDigitBanglaFromEnglish();
+
+        //outputs : ১২৩৪৫৬
+
+        console.log(bangla_converted_number);
+    </script> -->
+
+<script>
+    var modal = document.getElementById("myModal");
+        var showtext = document.getElementById("showtext");
+
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        function show(e) {
+            showtext.innerText = "Currently I don't have "+e+" account \n\n It will added soon";
+            // showtext.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio fugiat ipsum voluptatem necessitatibus mollitia eaque, adipisci dignissimos ducimus in incidunt accusamus. Pariatur tempora fugit autem nesciunt ut tenetur nisi cupiditate.";
+            modal.style.display = "block";
+            preventDefault();
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+</script>    
+</body>
+
+</html>
